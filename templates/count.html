@@ -1,0 +1,30 @@
+<html>
+
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <style>
+        body {
+            font-family: 'Poppins';
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <h2>There are {{count}} words in your text.</h2>
+        <h2>Your text:</h2>
+            {{full_text}}
+            <br>
+        <a href = "{% url 'home' %}">Try again</a>
+    </center>
+
+    <h3>Word count:</h3>
+    {% for word, counttotal in word_count_dictionary%}
+    {{word}} : {{counttotal}}
+    <br>
+    {% endfor %}
+
+</body>
+
+</html>

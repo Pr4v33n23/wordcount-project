@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <style>
+        body {
+            font-family: 'Poppins';
+            font-size: 20px;
+        }
+
+        .topright {
+            position: absolute;
+            top: 8px;
+            right: 16px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class = 'topright'>
+        <a href="{% url 'about'%}">About</a>
+    </div>
+
+    <center>
+        <h2>WORD COUNT</h2>
+        <form action="{% url 'count' %}">
+            <textarea cols='80' rows='10' name='fulltext'></textarea><br><br>
+            <input type="submit" value="Count!">
+        </form>
+    </center>
+</body>
+
+</html>
